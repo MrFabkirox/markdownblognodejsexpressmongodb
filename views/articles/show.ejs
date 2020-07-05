@@ -16,15 +16,15 @@
 
   <div class="container">
 
-    <h3>show</h3>
-    <h2 class="mb-4"><%= article.title %></h2>
+    <h3 class="mb-4">Show article, <%= article.title %></h3>
     <div class="text-muted mb-2"><%= article.createdAt.toLocaleDateString() %></div>
 
     <a href="/" class="btn btn-secondary">All Articles</a>
     <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
 
     <div>
-      <%= article.markdown %>
+      <!-- = article.markdown -->
+      <%- article.sanitizedHtml %>
     </div>
   </div>
 
